@@ -5,6 +5,16 @@
     width: 90%;
   }
   
+.base-btn {
+    padding: 0;
+    background: none;
+    color: black;
+    border: 1px solid black;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 @media only screen and (max-width: 768px) {
     .content-width {
         width: 100%;

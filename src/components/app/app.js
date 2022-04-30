@@ -5,8 +5,8 @@ import { algoliaClient, algoliaClientIndex } from '../../config';
 import { ALGOLIA_INDEX_NAME } from '../../contants';
 import {Header} from'../header';
 import { SearchFilter } from '../search-filter';
-import { RestaurantList } from '../restaurant-list/restaurant-list';
-import { OverlayLoader } from '../overlay-loader';
+import { Loader } from '../loader';
+import {RestaurantSearchResults} from '../restaurant-search-results'
 
 export const App = () => {
   const [searchRefresh, setSearchRefresh] = useState(false);
@@ -15,16 +15,20 @@ export const App = () => {
   useEffect(() => {
     if (searchRefresh) {
       setSearchRefresh(false)
-      setApiLoading(false)
+      if(apiLoading){
+        setApiLoading(false)
+      }
     }
-  }, [searchRefresh]);
+  }, [searchRefresh,apiLoading]);
+
+  const refreshResults = () => setSearchRefresh(true)
 
   const deleteRestaurant = (id) => {
     setApiLoading(true);
 
     algoliaClientIndex.deleteObject(id)
       .wait()
-      .then(_ => setSearchRefresh(true))
+      .then(refreshResults)
       .catch(err => {
         alert(`Sorry, there was an error in deleting the restaurant - ${err.message}`)
         setApiLoading(false);
@@ -33,11 +37,11 @@ export const App = () => {
 
   return (
     <InstantSearch searchClient={algoliaClient} indexName={ALGOLIA_INDEX_NAME} refresh={searchRefresh}>
-      <OverlayLoader show={apiLoading} />
+      <Loader show={apiLoading} overlay={true} />
       <Header />
       <div className="content-width">
         <SearchFilter />
-        <RestaurantList deleteRestaurant={deleteRestaurant} />
+        <RestaurantSearchResults deleteRestaurant={deleteRestaurant} refreshResults={refreshResults}/>
       </div>
     </InstantSearch>
   );

@@ -20,11 +20,11 @@ const RestaurantListComponent = ({
                 />
             ))}
         </div>
-        <div className='restaurant-list-action-btn-wrapper'>
-            <button disabled={!hasMore} onClick={refineNext} className="restaurant-list-show-more-btn">
+        {hasMore && <div className='restaurant-list-action-btn-wrapper'>
+            <button onClick={refineNext} className="base-btn restaurant-list-show-more-btn">
                 Show more
             </button>
-        </div>
+        </div>}
     </>
 )
 
