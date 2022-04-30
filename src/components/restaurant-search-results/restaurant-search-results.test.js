@@ -43,6 +43,6 @@ describe('RestaurantSearchResults', () => {
     })
     it('shows a no found message when api returns no data', () => {
         render(<RestaurantSearchResultsComponent {...defaultProps}/>)
-        expect(screen.getByText(/No results founds. Please cnage your search query and try again./i)).toBeInTheDocument()
+        expect(screen.getByText(/No results founds. Please change your search query and try again./i)).toBeInTheDocument()
     })
 })

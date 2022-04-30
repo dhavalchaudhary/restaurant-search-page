@@ -20,7 +20,7 @@ export const RestaurantSearchResultsComponent = ({ searchResults, deleteRestaura
     if(hasResults) {
         return <RestaurantList deleteRestaurant={deleteRestaurant} />
     } else {
-        return <div className="centered-wrapper"><h3>No results founds. Please cnage your search query and try again.</h3></div>
+        return <div className="centered-wrapper"><h3>No results founds. Please change your search query and try again.</h3></div>
     }
 }
 

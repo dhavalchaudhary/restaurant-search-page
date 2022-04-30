@@ -2,11 +2,12 @@
     display: grid;
     grid-template-columns: repeat(3, 33%);
     grid-gap: 10px 10px;
+    padding-bottom: 10px;
 }
 
 .restaurant-list-action-btn-wrapper{
     width: 100%;
-    padding: 30px 0px;
+    padding: 20px 0px;
     text-align: center;
 }
 
