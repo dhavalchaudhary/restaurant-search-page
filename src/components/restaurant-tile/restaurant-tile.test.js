@@ -31,5 +31,6 @@ describe('RestaurantTile', () => {
         fireEvent.click(screen.getByTestId('restaurant-delete'))
         
         expect(mockProps.deleteRestaurant).toHaveBeenCalledTimes(1)
+        expect(mockProps.deleteRestaurant).toHaveBeenCalledWith(mockProps.hit.objectID)
     })
 })
