@@ -14,7 +14,7 @@ export const RestaurantTile = ({ hit, deleteRestaurant }) => (
       <h3 className="restaurant-name">
         <Highlight attribute="name" hit={hit} />
       </h3>
-      <p className="restaurant-address">{`${hit.neighborhood} ${hit.city}`}</p>
+      <p className="restaurant-address">{`${hit.neighborhood}, ${hit.city}`}</p>
       <p className="restaurant-food-type">
         <Highlight attribute="food_type" hit={hit} />
       </p>

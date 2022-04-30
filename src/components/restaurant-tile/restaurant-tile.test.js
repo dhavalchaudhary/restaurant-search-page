@@ -23,7 +23,7 @@ describe('RestaurantTile', () => {
 
     expect(screen.getByText(mockProps.hit.name)).toBeInTheDocument()
     expect(
-      screen.getByText(`${mockProps.hit.neighborhood} ${mockProps.hit.city}`)
+      screen.getByText(`${mockProps.hit.neighborhood}, ${mockProps.hit.city}`)
     ).toBeInTheDocument()
     expect(screen.getByText(mockProps.hit.food_type)).toBeInTheDocument()
   })
