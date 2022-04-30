@@ -11,9 +11,6 @@ const RestaurantSearchResultsComponent = ({ searchResults, deleteRestaurant, err
     if(isSearchStalled) {
         return <div className='centered-wrapper'><Loader show={true} overlay={false} /></div>
     }
-    if(!hasResults) {
-        return <div className="centered-wrapper"><h3>No results founds. Please cnage your search query and try again</h3></div>
-    }
     if(error) {
         return <div className='centered-wrapper'>
             <h3>There was an error while searching, please try again.</h3>
@@ -22,8 +19,9 @@ const RestaurantSearchResultsComponent = ({ searchResults, deleteRestaurant, err
     }
     if(hasResults) {
         return <RestaurantList deleteRestaurant={deleteRestaurant} />
+    } else {
+        return <div className="centered-wrapper"><h3>No results founds. Please cnage your search query and try again</h3></div>
     }
-    return null
 }
 
 RestaurantSearchResultsComponent.propTypes = {
