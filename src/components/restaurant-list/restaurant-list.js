@@ -1,12 +1,14 @@
 import React from 'react';
 import { connectInfiniteHits } from 'react-instantsearch-dom';
 import { RestaurantTile } from '../restaurant-tile';
+import PropTypes from 'prop-types';
 import './restaurant-list.css';
 
 const RestaurantListComponent = ({
     hits,
     hasMore,
     refineNext,
+    deleteRestaurant
 }) => (
     <>
         <div className='restaurant-list'>
@@ -14,6 +16,7 @@ const RestaurantListComponent = ({
                 <RestaurantTile
                     key={hit.objectID}
                     hit={hit}
+                    deleteRestaurant={deleteRestaurant}
                 />
             ))}
         </div>
@@ -24,5 +27,10 @@ const RestaurantListComponent = ({
         </div>
     </>
 )
+
+RestaurantListComponent.propTypes = {
+    deleteRestaurant: PropTypes.func.isRequired
+}
+
 
 export const RestaurantList = connectInfiniteHits(RestaurantListComponent)
