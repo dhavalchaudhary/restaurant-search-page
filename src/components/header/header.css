@@ -1,7 +1,7 @@
 .header {
     margin-bottom: 20px;
     height: 50vh;
-    background: olive;
+    background: #5a5e9a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,10 +10,10 @@
   .header-title {
     margin-bottom: 100px;
     text-align: center;
+    color: #fff;
   }
   
   .header-search-box {
-    width: 75%;
-    margin: 0px auto;
+    margin: 0;
   }
   

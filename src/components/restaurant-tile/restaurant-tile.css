@@ -36,10 +36,10 @@
 }
 
 .restaurant-delete-btn {
-    background-color: red;
+    background-color: #ED4337;
     color: white;
     width: fit-content;
     outline: inherit;
-    border: 1px solid black;
+    border: 1px solid #ED4337;
     padding: 3px 8px;
 }
