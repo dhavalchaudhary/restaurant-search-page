@@ -1,19 +1,18 @@
 .header {
-    margin-bottom: 20px;
-    height: 50vh;
-    background: #5a5e9a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header-title {
-    margin-bottom: 100px;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .header-search-box {
-    margin: 0;
-  }
-  
+  margin-bottom: 20px;
+  height: 50vh;
+  background: #5a5e9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  margin-bottom: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.header-search-box {
+  margin: 0;
+}

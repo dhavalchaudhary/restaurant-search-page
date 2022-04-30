@@ -1,24 +1,23 @@
-
 .content-width {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
-  
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
 .base-btn {
-    padding: 0;
-    background: none;
-    color: black;
-    border: 1px solid black;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+  padding: 0;
+  background: none;
+  color: black;
+  border: 1px solid black;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 @media only screen and (max-width: 768px) {
-    .content-width {
-        width: 100%;
-        width: calc(100% - 30px);
-        padding: 0px 15px;
-    }
+  .content-width {
+    width: 100%;
+    width: calc(100% - 30px);
+    padding: 0px 15px;
+  }
 }

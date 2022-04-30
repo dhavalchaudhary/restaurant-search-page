@@ -1,32 +1,33 @@
 .dropdown {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .dropdown-title {
-    width: 100%;
-    padding: 5px 10px;
+  width: 100%;
+  padding: 5px 10px;
 }
 
 .selected-options-count {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .dropdown-options {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    box-shadow: 0px 10px 20px 0px lightgrey;
-    padding: 15px 15px;
-    background-color: white;
-    width: calc(100% - 30px);
-    margin-top: 5px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0px 10px 20px 0px lightgrey;
+  padding: 15px 15px;
+  background-color: white;
+  width: calc(100% - 30px);
+  margin-top: 5px;
 }
 
-.centered-text{
-    text-align: center;
+.centered-text {
+  text-align: center;
 }
 
-.ais-GeoSearch-input:checked, .ais-RefinementList-item--selected .ais-RefinementList-checkbox {
-    color: #b6b7d5;
+.ais-GeoSearch-input:checked,
+.ais-RefinementList-item--selected .ais-RefinementList-checkbox {
+  color: #b6b7d5;
 }

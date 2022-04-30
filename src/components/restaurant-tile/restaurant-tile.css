@@ -1,44 +1,44 @@
 .restaurant-tile {
-    border: 1px solid black;
-    padding: 5px;
-    overflow: none;
-    display: flex;
+  border: 1px solid black;
+  padding: 5px;
+  overflow: none;
+  display: flex;
 }
 
 .restaurant-image {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 }
 
 .restaurant-details {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    gap: 5px;
-    padding-bottom: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 5px;
+  padding-bottom: 10px;
 }
 
 .restaurant-name {
-    margin: 0;
-    font-size: 18px;
+  margin: 0;
+  font-size: 18px;
 }
 
 .restaurant-food-type {
-    margin: 0;
-    font-size: 14px;
-    flex-grow: 1;
+  margin: 0;
+  font-size: 14px;
+  flex-grow: 1;
 }
 
 .restaurant-address {
-    margin: 0;
-    font-size: 14px;
+  margin: 0;
+  font-size: 14px;
 }
 
 .restaurant-delete-btn {
-    background-color: #ED4337;
-    color: white;
-    width: fit-content;
-    border: 1px solid #ED4337;
-    padding: 3px 8px;
+  background-color: #ed4337;
+  color: white;
+  width: fit-content;
+  border: 1px solid #ed4337;
+  padding: 3px 8px;
 }
