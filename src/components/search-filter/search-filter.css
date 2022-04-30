@@ -1,0 +1,12 @@
+.search-filters-list {
+    display: grid;
+    grid-template-columns: repeat(4, 175px);
+    grid-gap: 10px 10px;
+    margin: 0px auto 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-filters-list {
+        grid-template-columns: repeat(2, auto);
+    }
+}
