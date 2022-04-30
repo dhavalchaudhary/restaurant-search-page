@@ -26,7 +26,7 @@ const DropdownRefinementListComponent = ({items, refine, title}) => {
             onClick={() => setIsOpen(!isOpen)}
         >
             {title}
-            {refinedOptionsCount > 0 && <span className='refined-count-display ais-RefinementList-count'>{refinedOptionsCount}</span>}
+            {refinedOptionsCount > 0 && <span className='ais-RefinementList-count selection-option-count'>{refinedOptionsCount}</span>}
         </button>
 
         {isOpen && <div className='dropdown-options'>

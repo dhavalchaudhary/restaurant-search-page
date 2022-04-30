@@ -14,8 +14,8 @@
     outline: inherit;
 }
 
-.refined-count-display {
-    margin-left: 20px
+.selection-option-count {
+    margin-left: 10px;
 }
 
 .dropdown-options {
@@ -23,9 +23,9 @@
     right: 0;
     z-index: 1;
     box-shadow: 0px 10px 20px 0px lightgrey;
-    padding: 15px 20px;
+    padding: 15px 15px;
     background-color: white;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     margin-top: 5px;
 }
 
