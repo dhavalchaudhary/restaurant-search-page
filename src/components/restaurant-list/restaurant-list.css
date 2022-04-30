@@ -11,13 +11,7 @@
 }
 
 .restaurant-list-show-more-btn{
-    background: none;
-    color: black;
-    border: 1px solid black;
     padding: 5px 10px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
     margin: 0px auto;
 }
 

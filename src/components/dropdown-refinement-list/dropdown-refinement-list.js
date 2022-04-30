@@ -22,7 +22,7 @@ const DropdownRefinementListComponent = ({items, refine, title}) => {
     const refinedOptionsCount = items.filter(item => item.isRefined).length;
 
     return <div className='dropdown' ref={wrapperRef}>
-        <button className='dropdown-title'
+        <button className='base-btn dropdown-title'
             onClick={() => setIsOpen(!isOpen)}
         >
             {title}

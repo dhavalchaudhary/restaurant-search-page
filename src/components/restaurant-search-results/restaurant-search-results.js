@@ -2,6 +2,7 @@ import React from 'react';
 import { connectStateResults } from 'react-instantsearch-dom';
 import { Loader } from '../loader';
 import { RestaurantList } from '../restaurant-list/restaurant-list';
+import PropTypes from 'prop-types'
 import './restaurant-search-results.css';
 
 
@@ -23,6 +24,11 @@ const RestaurantSearchResultsComponent = ({ searchResults, deleteRestaurant, err
         return <RestaurantList deleteRestaurant={deleteRestaurant} />
     }
     return null
+}
+
+RestaurantSearchResultsComponent.propTypes = {
+    deleteRestaurant: PropTypes.func.isRequired,
+    refreshResults: PropTypes.func.isRequired
 }
 
 export const RestaurantSearchResults = connectStateResults(RestaurantSearchResultsComponent);
