@@ -3,7 +3,7 @@ import { Highlight } from 'react-instantsearch-dom';
 import './restaurant-tile.css';
 import PropTypes from 'prop-types';
 
-export const RestaurantTile = ({hit, deleteRestaurant}) => <div className="restaurant-tile">
+export const RestaurantTile = ({hit, deleteRestaurant}) => <div className="restaurant-tile" data-testid="restaurant-tile">
         <img className="restaurant-image" alt={`${hit.name} restaurant`} src={hit.image_url} />
         <div className="restaurant-details">
             <h3 className="restaurant-name"><Highlight attribute="name" hit={hit} /></h3>

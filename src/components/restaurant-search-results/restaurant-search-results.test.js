@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { RestaurantSearchResultsComponent } from './restaurant-search-results';
 
-const commonProps = {
+const defaultProps = {
     searchResults: {
         nbHits: 0
     },
@@ -21,28 +21,28 @@ describe('RestaurantSearchResults', () => {
         jest.clearAllTimers()
     })
     it('shows a loader when api is loading', () => {
-        const mockProps = {...commonProps, isSearchStalled: true}
+        const mockProps = {...defaultProps, isSearchStalled: true}
         render(<RestaurantSearchResultsComponent {...mockProps}/>)
-        expect(screen.getByTestId('loader')).toBeInTheDocument()
+        expect(screen.getByTestId('loader-wrapper')).toBeInTheDocument()
     })
     it('shows a error message when api errors out', () => {
-        const mockProps = {...commonProps, error: true}
+        const mockProps = {...defaultProps, error: true}
         render(<RestaurantSearchResultsComponent {...mockProps}/>)
         expect(screen.getByText(/There was an error while searching, please try again./i)).toBeInTheDocument()
     })
     it('retries the api call when clicked on retry button in error message', () => {
-        const mockProps = {...commonProps, error: true}
+        const mockProps = {...defaultProps, error: true}
         render(<RestaurantSearchResultsComponent {...mockProps}/>)
         fireEvent.click(screen.getByTestId('retry-btn'));
         expect(mockProps.refreshResults).toHaveBeenCalledTimes(1)
     })
     it('shows the list of restaurants when the api returns data', () => {
-        const mockProps = {...commonProps, searchResults: {nbHits: 10}}
+        const mockProps = {...defaultProps, searchResults: {nbHits: 10}}
         render(<RestaurantSearchResultsComponent {...mockProps}/>)
         expect(screen.getByTestId('restaurant-list')).toBeInTheDocument()
     })
     it('shows a no found message when api returns no data', () => {
-        render(<RestaurantSearchResultsComponent {...commonProps}/>)
+        render(<RestaurantSearchResultsComponent {...defaultProps}/>)
         expect(screen.getByText(/No results founds. Please cnage your search query and try again./i)).toBeInTheDocument()
     })
 })

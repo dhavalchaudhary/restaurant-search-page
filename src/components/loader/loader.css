@@ -10,9 +10,6 @@
     justify-content: center;
     z-index: 1;
 }
-.overlay-loader-wrapper.hidden{
-    display: none;
-}
 .loader {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #000000;

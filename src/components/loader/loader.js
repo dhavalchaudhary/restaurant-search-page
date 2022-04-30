@@ -3,13 +3,12 @@ import React from 'react';
 import "./loader.css";
 
 export const Loader = ({show, overlay}) => {
-    const getWrapperClass = (show, overlay) => {
+    const getWrapperClass = (overlay) => {
         let wrapperClasses = '';
         wrapperClasses = `${wrapperClasses} ${overlay ? 'overlay-loader-wrapper' : 'loader-wrapper'}` ;
-        wrapperClasses = `${wrapperClasses} ${show ? '' : 'hidden'}` ;
         return wrapperClasses
     }
-    return <div className={getWrapperClass(show, overlay)}><div className="loader"></div></div>
+    return show ? <div className={getWrapperClass(overlay)} data-testid="loader-wrapper"><div className="loader"></div></div> : null
 }
 
 Loader.propTypes = {

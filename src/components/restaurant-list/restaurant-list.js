@@ -4,14 +4,14 @@ import { RestaurantTile } from '../restaurant-tile';
 import PropTypes from 'prop-types';
 import './restaurant-list.css';
 
-const RestaurantListComponent = ({
+export const RestaurantListComponent = ({
     hits,
     hasMore,
     refineNext,
     deleteRestaurant
 }) => (
     <>
-        <div className='restaurant-list'>
+        <div className='restaurant-list' data-testid="restaurant-list">
             {hits.map(hit => (
                 <RestaurantTile
                     key={hit.objectID}
@@ -21,7 +21,7 @@ const RestaurantListComponent = ({
             ))}
         </div>
         {hasMore && <div className='restaurant-list-action-btn-wrapper'>
-            <button onClick={refineNext} className="base-btn restaurant-list-show-more-btn">
+            <button onClick={refineNext} className="base-btn restaurant-list-show-more-btn" data-testid="restaurant-list-show-more">
                 Show more
             </button>
         </div>}

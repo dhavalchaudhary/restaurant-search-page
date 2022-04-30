@@ -8,7 +8,7 @@
     padding: 5px 10px;
 }
 
-.selection-option-count {
+.selected-options-count {
     margin-left: 10px;
 }
 
@@ -21,6 +21,10 @@
     background-color: white;
     width: calc(100% - 30px);
     margin-top: 5px;
+}
+
+.centered-text{
+    text-align: center;
 }
 
 .ais-GeoSearch-input:checked, .ais-RefinementList-item--selected .ais-RefinementList-checkbox {
