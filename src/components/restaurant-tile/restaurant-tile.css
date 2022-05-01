@@ -11,10 +11,10 @@
 }
 
 .restaurant-details {
-  flex-grow: 1;
+  margin-left: 10px;
+  width: calc(100% - 160px);
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
   gap: 5px;
   padding-bottom: 10px;
 }
